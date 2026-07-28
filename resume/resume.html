@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahsun Iqbal — CV</title>
+  <style>
+    :root {
+      --accent: #1f7ab0;
+      --ink: #222;
+      --muted: #555;
+      --line: #d9d9d9;
+      --bullet: var(--accent);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f4f5f6;
+      color: var(--ink);
+      font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    .page {
+      max-width: 820px;
+      margin: 32px auto;
+      background: #fff;
+      padding: 48px 56px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    h1 {
+      font-size: 44px;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+    .contact {
+      text-align: right;
+      font-size: 13px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    .contact div { margin-bottom: 4px; }
+    .summary {
+      margin: 20px 0 8px;
+      font-size: 15px;
+      color: #333;
+    }
+    h2 {
+      font-size: 24px;
+      margin: 28px 0 4px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 40px;
+    }
+    ul { margin: 8px 0; padding-left: 20px; }
+    li { margin-bottom: 6px; font-size: 14px; }
+    li::marker { color: var(--bullet); }
+    .job { margin: 14px 0; }
+    .date {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .role {
+      font-size: 19px;
+      font-weight: bold;
+      margin: 2px 0 4px;
+    }
+    .role .accent { color: var(--accent); }
+    .job p { margin: 0; font-size: 14px; color: #444; }
+    .edu-item { margin-bottom: 10px; }
+    .edu-item .role { font-size: 18px; }
+    a.portfolio { color: var(--accent); font-size: 14px; text-decoration: underline; }
+    @media (max-width: 640px) {
+      .page { padding: 28px 22px; }
+      h1 { font-size: 34px; }
+      .contact { text-align: left; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Ahsun Iqbal</h1>
+      <div class="contact">
+        <div><a href="tel:+923352254461">+92-335-2254461</a> &#9742;</div>
+        <div><a href="mailto:ahsuniqbal1505@gmail.com">ahsuniqbal1505@gmail.com</a> &#9993;</div>
+        <div><a href="https://www.linkedin.com/in/ahsuniqbal/" target="_blank" rel="noopener noreferrer">LinkedIn</a> in</div>
+        <div><a href="#">Portfolio</a> &#127760;</div>
+      </div>
+    </header>
+
+    <p class="summary">
+      Frontend-focused software engineer with 7+ years building production web applications, now
+      specialized in AI-native products &mdash; LLM integrations, autonomous AI agents, and workflow
+      automation. Strongest in React &amp; Next.js, with full-stack range across Node.js and modern
+      databases. I turn complex AI capabilities into clean, usable product surfaces.
+    </p>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="two-col">
+        <ul>
+          <li>Frontend Development (React JS, Next JS, TypeScript)</li>
+          <li>AI Product Engineering (multiple LLMs &ndash; Claude, GPT/OpenAI, Gemini, Kimi)</li>
+          <li>AI Agents &amp; conversational / chat AI systems</li>
+          <li>Process &amp; workflow automation, AI agent orchestration</li>
+          <li>Streaming / real-time AI interfaces &amp; chat UIs</li>
+          <li>State management (Redux, Zustand)</li>
+          <li>UI/UX sensibility &amp; responsive design (HTML, CSS, Bootstrap)</li>
+        </ul>
+        <ul>
+          <li>Backend (Node JS, Express JS, NestJS, RESTful API design &amp; integration)</li>
+          <li>Databases (PostgreSQL, MySQL, MongoDB, Firebase, SQL Server)</li>
+          <li>Auth &amp; security (JWT); Fintech &amp; credit-card systems, I2C card issuing</li>
+          <li>DevOps (Docker, AWS, Google Compute Engine, CI/CD)</li>
+          <li>Product flow / process design &amp; requirement gathering</li>
+          <li>Design patterns (MVC, MVVM)</li>
+          <li>Good OOP and Data Structures knowledge</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="date">May 2024 &ndash; Present</div>
+        <div class="role"><span class="accent">Senior Software Engineer</span> / Beam AI</div>
+        <p>Leading a team of 4 developers building AI-native product surfaces for an end-to-end
+        generative-AI automation platform whose agents help organizations automate repetitive manual
+        work. Work spans React / Next.js &amp; TypeScript frontend for AI agent dashboards and chat
+        interfaces, integration with multiple LLMs (Claude, GPT/OpenAI, Gemini, Kimi), and building
+        automation workflows that connect AI agents to business applications end-to-end &mdash;
+        delivering customized AI solutions across Sales, Marketing, HR and Operations. Deployed 200+
+        automation workflows serving 800+ users, saving an estimated 9,000 hours of manual work.</p>
+      </div>
+
+      <div class="job">
+        <div class="date">Sep 2022 &ndash; Apr 2024</div>
+        <div class="role"><span class="accent">Senior Software Engineer</span> / Caary Capital</div>
+        <p>Frontend lead on a corporate admin portal used by Canadian SMEs, for Canada's business
+        credit and spend-management platform &mdash; leading a team of 3 developers. Built admin
+        tooling for a fintech product handling accessible credit, spending controls, and automated
+        expense management, with some Node.js server-side work. Set up Azure CI/CD pipelines and
+        handled SSL configuration. In production across multiple Canadian organizations.</p>
+      </div>
+
+      <div class="job">
+        <div class="date">Feb 2022 &ndash; Sep 2022</div>
+        <div class="role"><span class="accent">Senior Full Stack Developer</span> / Trukkr Pvt. Ltd.</div>
+        <p>Senior full-stack (MERN) developer on an ERP portal for Pakistan's first online logistics
+        platform, automating shipments and logistics operations. Delivered ERP tooling used by
+        multiple organizations to manage day-to-day logistics workflows.</p>
+      </div>
+
+      <div class="job">
+        <div class="date">Apr 2021 &ndash; Feb 2022</div>
+        <div class="role"><span class="accent">Full Stack Developer</span> / M3 Technologies Pakistan Pvt. Ltd.</div>
+        <p>Full-stack developer across data-visualization dashboards and fintech / credit-card
+        applications for a telecom-grade VAS provider serving the largest number of corporate clients
+        in Pakistan. Built data-heavy product UIs plus backend services in Node.js (and some NestJS)
+        with PostgreSQL and MySQL, including payment-related features.</p>
+      </div>
+
+      <div class="job">
+        <div class="date">Feb 2019 &ndash; Mar 2021</div>
+        <div class="role"><span class="accent">React JS Developer</span> / Trulyfuture Pvt. Ltd.</div>
+        <p>React.js developer building web apps for international corporate clients at a service-based
+        startup, with backend work in Node.js (and some NestJS) and REST API integrations over
+        PostgreSQL and MySQL &mdash; my first professional role, spanning a wide range of client
+        projects.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item">
+        <div class="date">2015 &ndash; 2019</div>
+        <div class="role"><span class="accent">Bachelors (BSCS)</span> / University of Karachi (UBIT)</div>
+      </div>
+      <div class="edu-item">
+        <div class="date">2013 &ndash; 2015</div>
+        <div class="role"><span class="accent">Intermediate (Pre-Engineering)</span> / Govt. Dehli College</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p><a class="portfolio" href="#">Click to see full portfolio</a></p>
+      <div class="two-col">
+        <ul>
+          <li><a href="#">Caary Capital</a> (Admin Portal - REACT, Node)</li>
+          <li><a href="#">AKD Securities</a> (Data visualization dashboard &ndash; React, Node)</li>
+          <li><a href="#">Double Cars</a> (React, Node. MySQL)</li>
+          <li><a href="#">Seklo.pk</a> (React, Node, MySQL)</li>
+          <li><a href="#">Seen To Hire</a> (React, Node, MySQL)</li>
+          <li><a href="#">Datalytiks</a> (Wordpress)</li>
+          <li><a href="#">Buraq Corporations</a> (Wordpress)</li>
+        </ul>
+        <ul>
+          <li><a href="#">Boltay Huroof</a> (Wordpress)</li>
+          <li>Luxe by AMC (React, Node.js, MySQL)</li>
+          <li>Howdy's online ordering website (React, Firebase)</li>
+          <li>Nikon E-Commerce website (under development)</li>
+          <li>Industrial IOT Cloud based application (React, MySQL)</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

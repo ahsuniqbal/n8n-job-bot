@@ -1,0 +1,86 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: jobbot-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - jobbot
+
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    container_name: jobbot-gotenberg
+    restart: unless-stopped
+    command:
+      - "gotenberg"
+      - "--api-port=3000"
+      - "--api-timeout=120s"
+    networks:
+      - jobbot
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: jobbot-n8n
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      gotenberg:
+        condition: service_started
+    ports:
+      - "${N8N_PORT}:5678"
+    environment:
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: postgres
+      DB_POSTGRESDB_PORT: 5432
+      DB_POSTGRESDB_DATABASE: ${POSTGRES_DB}
+      DB_POSTGRESDB_USER: ${POSTGRES_USER}
+      DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
+      N8N_HOST: ${N8N_HOST}
+      N8N_PORT: 5678
+      N8N_PROTOCOL: http
+      WEBHOOK_URL: http://${N8N_HOST}:${N8N_PORT}/
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY}
+      GENERIC_TIMEZONE: ${GENERIC_TIMEZONE}
+      TZ: ${TZ}
+      N8N_RUNNERS_ENABLED: "true"
+      N8N_BLOCK_ENV_ACCESS_IN_NODE: "false"
+      N8N_RESTRICT_FILE_ACCESS_TO: "/data"
+      N8N_BLOCK_FILE_ACCESS_TO_N8N_FILES: "false"
+      ADZUNA_APP_ID: ${ADZUNA_APP_ID}
+      ADZUNA_APP_KEY: ${ADZUNA_APP_KEY}
+      ADZUNA_COUNTRY: ${ADZUNA_COUNTRY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      JOB_KEYWORDS: ${JOB_KEYWORDS}
+      JOB_LOCATION: ${JOB_LOCATION}
+      JOB_MIN_SCORE: ${JOB_MIN_SCORE}
+      JOB_MAX_AGE_DAYS: ${JOB_MAX_AGE_DAYS}
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USER: ${SMTP_USER}
+      SMTP_PASS: ${SMTP_PASS}
+      NOTIFY_TO: ${NOTIFY_TO}
+      GOTENBERG_URL: http://gotenberg:3000
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+      - ./resume:/data/resume:ro
+      - ./workflows:/data/workflows
+    networks:
+      - jobbot
+
+networks:
+  jobbot:
+    driver: bridge
