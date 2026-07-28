@@ -64,8 +64,8 @@ accessible credit, spending controls, and automated expense management, with som
 work. Set up Azure CI/CD pipelines and handled SSL configuration. In production across multiple
 Canadian organizations.
 
-### Senior Full Stack Developer — Trukkr Pvt. Ltd. (Feb 2022 – Sep 2022)
-Senior full-stack (MERN) developer on an ERP portal for Pakistan's first online logistics platform,
+### Full Stack Developer — Trukkr Pvt. Ltd. (Feb 2022 – Sep 2022)
+Full-stack (MERN) developer on an ERP portal for Pakistan's first online logistics platform,
 automating shipments and logistics operations. Delivered ERP tooling used by multiple organizations
 to manage day-to-day logistics workflows.
 
@@ -83,8 +83,23 @@ first professional role, spanning a wide range of client projects.
 ---
 
 ## Side Venture
-- **Vamonos** — own startup, tourism in Pakistan. (Gave domain knowledge of the tourism industry;
-  not currently listed on the resume.)
+
+### Co-founder — Vamonos (2026 – Present)
+Co-founder on an AI trip-planning and agency-management platform for travel in
+Pakistan; leads product and engineering. Building a shared AI planning engine (trip brief →
+day-by-day itinerary + PKR cost breakdown) serving two surfaces: a paid SaaS for tour agencies
+(trip/customer management, payment tracking, WhatsApp quoting, PDF export) and a free consumer
+self-planner. Works across the full loop — agency customer-discovery interviews, product and
+data-model design, competitor research, engineering.
+Stack: Next.js, TypeScript, Supabase (Postgres/auth/storage), Claude API, Vercel, PDF export.
+Status: Phase 0 — pre-launch, validating with design partners. Gave domain knowledge of the
+tourism industry.
+
+**CV placement rule:** promote Vamonos to its own **Ventures / Experience** section when the target
+company is startup-native and treats founding your own thing as a plus (early-stage startups, AI
+product companies, founder-friendly teams). For companies likely to read a side startup as divided
+loyalty (large corporates, enterprises, agencies, conservative employers), leave it in **Projects**
+— visible, but not framed as a competing commitment. Default is Projects.
 
 ---
 
@@ -105,17 +120,20 @@ banking & fintech security (Caary — Canadian fintech), AI automation (Beam AI)
 ---
 
 ## Major Client Projects
+- **Squicle** (squicle.com) — internal vendor portal for a social event platform (consumer apps
+  ship on iOS + Android; consumer side does event discovery, group chat, RSVP, shared-expense
+  settlement). **Frontend only — React.js + Redux** (backend Node.js + MySQL, not his). Covers
+  vendor onboarding, **KYB verification**, restaurant menu creation/management, and event
+  creation + publishing. Integrated **Google Maps + Places APIs** for venue location and address
+  resolution. Vendor portal is internal — not visible on the public site.
+  _Freelance side project, Mar 2024 – Dec 2024 (concurrent with Beam)._
 - Caary Capital — Admin Portal (React, Node)
 - AKD Securities — Data-visualization dashboard (React, Node)
 - Double Cars (React, Node, MySQL)
 - Seklo.pk (React, Node, MySQL)
 - Seen To Hire (React, Node, MySQL)
-- Datalytiks (WordPress)
-- Buraq Corporations (WordPress)
-- Boltay Huroof (WordPress)
 - Luxe by AMC (React, Node.js, MySQL)
 - Howdy's online ordering website (React, Firebase)
-- Nikon E-Commerce website (under development)
 - Industrial IOT Cloud-based application (React, MySQL)
 
 ---
