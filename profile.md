@@ -5,7 +5,7 @@
 - **Email:** ahsuniqbal1505@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/ahsuniqbal/
 - **Location:** Karachi, Pakistan
-- **Portfolio:** _TBD_
+- **Portfolio:** https://ahsuniqbal.com
 
 ## Summary
 Frontend-focused software engineer with 7+ years building production web applications, now
